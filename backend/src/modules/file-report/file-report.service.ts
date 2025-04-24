@@ -39,19 +39,18 @@ export class FileReportService {
       doc.on('data', buffer.push.bind(buffer));
       doc.on('end', () => resolve(Buffer.concat(buffer)));
 
-      // Agregamos la tabla
       doc.table(
         {
           title: 'Historial de Estacionamiento',
           headers: [
-            'ID',
+            'VIN',
             'Hora Entrada',
             'Hora Salida',
             'Monto Pagado',
             'Placa',
           ],
           rows: history.map((h) => [
-            h.id,
+            h.vehicle?.vehicle_identification_number ?? '—',
             h.entry_time?.toLocaleString() ?? '—',
             h.exit_time?.toLocaleString() ?? '—',
             `$${h.amount_pay.toFixed(2)}`,
