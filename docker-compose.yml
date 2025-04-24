@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  web:
+    container_name: backend
+    restart: always
+    build: ./backend
+    ports:
+      - "4000:4000"
+    depends_on:
+      - postgres
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=animal18
+      - DB_NAME=parking_lot
+  postgres:
+    container_name: base-datos
+    image: postgres:15
+    environment:
+      DB_HOST: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: animal18
+      POSTGRES_DB: parking_lot
+
+  web-page:
+    container_name: pagina-web
+    restart: always
+    build: ./frontend
+    ports:
+      - "3000:3000"

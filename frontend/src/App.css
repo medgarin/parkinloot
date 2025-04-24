@@ -1,0 +1,60 @@
+.parking-meter {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-self: center;
+  margin-top: 10vh;
+  width: 30vw;
+  height: 40vh;
+  border-radius: 10px;
+  background-color: rgb(65, 65, 173);
+}
+
+.parking-meter--title {
+  display: block;
+  margin: 0 auto;
+}
+
+.parking-meter--container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin: 12px 0;
+}
+
+h2 {
+  margin: 20px 15px 0;
+}
+
+.parking-meter--result {
+  height: 100%;
+  width: 20%;
+}
+
+.seeder--button {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  margin-top: 15px;
+  width: 30vw;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgb(65, 173, 97);
+}
+
+.file-download {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  justify-self: center;
+  margin-top: 15px;
+  width: 30vw;
+  height: 30px;
+}
+
+.seeder--button-red {
+  background-color: rgb(214, 74, 39);
+}
