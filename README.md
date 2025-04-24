@@ -20,7 +20,7 @@ Este comando descargará las imágenes necesarias y configurará los servicios d
 
 ## 3. Acceder al Proyecto
 
-Una vez que los contenedores estén corriendo, abre tu navegador y accede a la aplicación en:
+Abre tu navegador y accede a la url:
 
 [**http://localhost:3000/**](http://localhost:3000/)
 
