@@ -10,13 +10,13 @@ git clone https://github.com/jeffrey-dahmer/estacionamiento.git
 
 ## 2. Configuración del Proyecto con Docker
 
-A continuación, navega a la carpeta del proyecto clonado y ejecuta el siguiente comando para construir y levantar los contenedores de Docker:
+```bash
+cd /estacionamiento 
+```
 
 ```bash
 docker compose -f 'docker-compose.yml' up -d --build
 ```
-
-Este comando descargará las imágenes necesarias y configurará los servicios definidos en el archivo `docker-compose.yml`.
 
 ## 3. Acceder al Proyecto
 
