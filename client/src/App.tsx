@@ -1,11 +1,10 @@
 import "./App.css";
+import { HomePage } from "./pages/Home";
 
 function App() {
-  return (
-    <>
-      <h1>Parkingloot - Pruebas</h1>
-    </>
-  );
+  // integrate with react-router
+  // add homne as default page
+  return <HomePage />;
 }
 
 export default App;

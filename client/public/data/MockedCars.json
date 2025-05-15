@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "type": "Carro",
+      "registration": "ABC-1234",
+      "total": 100
+    },
+    {
+      "id": 2,
+      "type": "Carro",
+      "registration": "DEF-5678",
+      "total": 200
+    },
+    {
+      "id": 3,
+      "type": "Carro",
+      "registration": "GHI-9012",
+      "total": 300
+    },
+    {
+      "id": 4,
+      "type": "Carro",
+      "registration": "JKL-3456",
+      "total": 400
+    }
+  ]
+}
