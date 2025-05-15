@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Car } from "../../types/Cars";
 import { ListItem } from "./ListItem";
-import { API } from "../../services/API";
+import { carsApi } from "../../services/CarsApi";
 
 export const List = () => {
   const [cars, setCars] = useState<Car[]>([]);
@@ -9,7 +9,7 @@ export const List = () => {
   useEffect(() => {
     //on mount component
     const fetchCars = async () => {
-      const data = await API.getCars();
+      const data = await carsApi.getCars();
       setCars(data);
     };
     fetchCars();
