@@ -8,7 +8,7 @@ export const HomePage = () => {
       </div>
       <section className="flex flex-row">
         {/* Add user componet with initial data name, email and picture */}
-        <h2 className="text-xl font-bold mb-4">Bienvenido User {`<>`}</h2>
+        <h2 className="text-xl font-bold mb-4">Bienvenido Users {`<>`}</h2>
         <List />
       </section>
     </section>
