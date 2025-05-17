@@ -4,25 +4,109 @@
       "id": 1,
       "type": "Carro",
       "registration": "ABC-1234",
-      "total": 100
+      "total": 100,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
     },
     {
       "id": 2,
       "type": "Carro",
       "registration": "DEF-5678",
-      "total": 200
+      "total": 200,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
     },
     {
       "id": 3,
       "type": "Carro",
       "registration": "GHI-9012",
-      "total": 300
+      "total": 300,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
     },
     {
       "id": 4,
       "type": "Carro",
       "registration": "JKL-3456",
-      "total": 400
+      "total": 400,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 5,
+      "type": "Carro",
+      "registration": "MNO-7890",
+      "total": 500,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 6,
+      "type": "Carro",
+      "registration": "PQR-1234",
+      "total": 600,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 7,
+      "type": "Carro",
+      "registration": "STU-5678",
+      "total": 700,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 8,
+      "type": "Carro",
+      "registration": "VWX-9012",
+      "total": 800,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 9,
+      "type": "Carro",
+      "registration": "YZA-3456",
+      "total": 900,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 10,
+      "type": "Carro",
+      "registration": "BCD-7890",
+      "total": 1000,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 11,
+      "type": "Carro",
+      "registration": "EFG-1234",
+      "total": 1100,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 12,
+      "type": "Carro",
+      "registration": "HIJ-5678",
+      "total": 1200,
+      "startDateTime": "2023-10-01T10:00:00Z",
+      "endDateTime": "2023-10-01T12:00:00Z",
+      "status": "ACTIVE"
     }
   ]
 }

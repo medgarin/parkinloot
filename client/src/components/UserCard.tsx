@@ -1,23 +1,14 @@
-import { useState, useEffect } from "react";
-import { userApi } from "../services/UserApi";
 import type { User } from "../types/Users";
 import { FaHeart } from "react-icons/fa";
 import { ImProfile } from "react-icons/im";
 import { FaUserFriends } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 
-export const UserCard = () => {
-  const [user, setUser] = useState<User>();
+type UserCardProps = {
+  user?: User;
+};
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      const data = await userApi.getUser();
-      setUser(data);
-    };
-
-    fetchUser();
-  }, []);
-
+export const UserCard = ({ user }: UserCardProps) => {
   return (
     <section className="flex flex-col w-2xl m-4">
       <div className="bg-cyan-700 h-40 rounded-t-2xl">

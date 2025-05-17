@@ -1,7 +1,14 @@
-import { List } from "../../components/List/List";
+import { useEffect } from "react";
 import { UserCard } from "../../components/UserCard";
+import { useUserInfo } from "../../hooks/useUserInfo";
+import { Reports } from "../../components/Reports/Reports";
 
 export const HomePage = () => {
+  const { getUserById, user } = useUserInfo();
+
+  useEffect(() => {
+    getUserById().catch(null);
+  }, [getUserById]);
   return (
     <section className="flex flex-col">
       <div className="flex flex-col">
@@ -10,9 +17,9 @@ export const HomePage = () => {
       <section className="flex flex-row">
         {/* Add user componet with initial data name, email and picture */}
         <h2 className="text-xl font-bold mb-4">
-          Bienvenido User {<UserCard />}
+          Bienvenido User {<UserCard user={user} />}
         </h2>
-        <List />
+        <Reports />
       </section>
     </section>
   );

@@ -1,24 +1,12 @@
-import { useEffect, useState } from "react";
 import type { Car } from "../../types/Cars";
 import { ListItem } from "./ListItem";
-import { carsApi } from "../../services/CarsApi";
 
-export const List = () => {
-  const [cars, setCars] = useState<Car[]>([]);
+export interface ListProps {
+  list: Car[];
+}
 
-  useEffect(() => {
-    //on mount component
-    const fetchCars = async () => {
-      const data = await carsApi.getCars();
-      setCars(data);
-    };
-    fetchCars();
-    return () => {
-      // on disunt component
-    };
-    // on component change
-  }, []);
-
+export const List = ({ list }: ListProps) => {
+  // add styles with tailwind for this component
   return (
     <>
       <table className="table-auto border-collapse border border-gray-300 w-full">
@@ -27,13 +15,17 @@ export const List = () => {
             <th className="border border-gray-300 px-4 py-2">ID</th>
             <th className="border border-gray-300 px-4 py-2">Matrícula</th>
             <th className="border border-gray-300 px-4 py-2">Tipo</th>
+            <th className="border border-gray-300 px-4 py-2">Fecha Inicio</th>
+            <th className="border border-gray-300 px-4 py-2">Fecha fin</th>
+            <th className="border border-gray-300 px-4 py-2">Estado</th>
             <th className="border border-gray-300 px-4 py-2">
               <b>Total</b>
             </th>
+            <th className="border border-gray-300 px-4 py-2">Accion</th>
           </tr>
         </thead>
         <tbody>
-          {cars?.map((car) => (
+          {list?.map((car) => (
             <ListItem key={car.id} car={car} />
           ))}
         </tbody>
