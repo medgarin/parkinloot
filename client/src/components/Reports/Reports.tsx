@@ -1,29 +1,31 @@
-import React, { useEffect, useState } from "react";
-import type { Car } from "../../types/Cars";
-import { CarsResource } from "../../services/CarsResource";
-import { List } from "../List/List";
+import { useEffect } from "react";
+import { ListBasic } from "../List/ListBasic";
+import { useCarsInfo } from "../../hooks/useCarsInfo";
+import { ListDetail } from "../List/ListDetail";
+import type { ReportProps } from "../../types/Reports";
 
 // Add props, elemnts to show, type of vieww
-export const Reports = () => {
+export const Reports = ({ ListMode }: ReportProps) => {
   // clean this code, conver into a custom hook
-  const [cars, setCars] = useState<Car[]>([]);
+  const { getGetAllCars, cars } = useCarsInfo();
 
   useEffect(() => {
-    //on mount component
-    const fetchCars = async () => {
-      const data = await CarsResource.getCars();
-      setCars(data);
-    };
-    fetchCars();
-    return () => {
-      // on disunt component
-    };
-    // on component change
-  }, []);
+    getGetAllCars().catch(null);
+  }, [getGetAllCars]);
+
+  const List = () => {
+    if (ListMode == "BASIC") {
+      return <ListBasic list={cars} />;
+    }
+    if (ListMode == "DETAIL") {
+      return <ListDetail list={cars} />;
+    }
+  };
+
   return (
     <>
       <h3>Listado de reportes</h3>
-      <List list={cars} />
+      <List />
     </>
   );
 };

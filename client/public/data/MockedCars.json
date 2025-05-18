@@ -7,7 +7,7 @@
       "total": 100,
       "startDateTime": "2023-10-01T10:00:00Z",
       "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "ACTIVE"
+      "status": "INACTIVE"
     },
     {
       "id": 2,

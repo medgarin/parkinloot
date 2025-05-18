@@ -5,5 +5,5 @@ export interface Car {
   total: number;
   startDateTime: string;
   endDateTime: string;
-  satus: string;
+  status: string;
 }
