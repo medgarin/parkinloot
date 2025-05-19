@@ -19,7 +19,7 @@ export const HomePage = () => {
         <h2 className="text-xl font-bold mb-4">
           Bienvenido User {<UserCard user={user} />}
         </h2>
-        <Reports ListMode="DETAIL" />
+        <Reports ListType="BASIC" />
       </section>
     </section>
   );

@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import type { Car } from "../../types/Cars";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { FaRegMoneyBill1 } from "react-icons/fa6";
@@ -7,12 +8,12 @@ export const ListItemBasic = ({ car }: { car: Car }) => {
 
   const isActive = car.status == "ACTIVE" ? true : false;
 
-  const startTime = new Date(car.startDateTime);
-  const endTime = new Date(car.endDateTime);
+  const timeParked = useMemo(() => {
+    const startTime = new Date(car.startDateTime);
+    const endTime = new Date(car.endDateTime);
 
-  const timeParked = Math.floor(
-    (endTime.getTime() - startTime.getTime()) / 1000 / 60
-  );
+    return Math.floor((endTime.getTime() - startTime.getTime()) / 1000 / 60);
+  }, [car.startDateTime, car.endDateTime]);
 
   return (
     <tr className="hover:bg-gray-50">

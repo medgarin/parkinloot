@@ -1,3 +1,5 @@
+export type ListType = "BASIC" | "DETAIL";
+
 export interface ReportProps {
-  ListMode: "BASIC" | "DETAIL";
+  ListType: ListType;
 }
