@@ -13,9 +13,9 @@ export const Reports = ({ ListType }: ReportProps) => {
   }, [getGetAllCars]);
 
   return (
-    <>
-      <h3>Listado de reportes</h3>
+    <section className="flex flex-col col-span-2">
+      <h3>Estado actualmente al día de hoy</h3>
       <List list={cars} ListType={ListType} />
-    </>
+    </section>
   );
 };

@@ -10,7 +10,7 @@ type UserCardProps = {
 
 export const UserCard = ({ user }: UserCardProps) => {
   return (
-    <section className="flex flex-col w-2xl m-4">
+    <section className="flex flex-col m-4">
       <div className="bg-cyan-700 h-40 rounded-t-2xl">
         <div className="flex relative top-21 items-center gap-4 ml-4">
           <div className="w-24 h-24">

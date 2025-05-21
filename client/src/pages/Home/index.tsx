@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { UserCard } from "../../components/UserCard";
 import { useUserInfo } from "../../hooks/useUserInfo";
 import { Reports } from "../../components/Reports/Reports";
+import { OcupationChart } from "../../components/Reports/OcupationChart";
 
 export const HomePage = () => {
   const { getUserById, user } = useUserInfo();
@@ -10,16 +11,11 @@ export const HomePage = () => {
     getUserById().catch(null);
   }, [getUserById]);
   return (
-    <section className="flex flex-col">
-      <div className="flex flex-col">
-        <h1 className="text-4xl font-bold mb-4">Home Page</h1>
-      </div>
-      <section className="flex flex-row">
-        {/* Add user componet with initial data name, email and picture */}
-        <h2 className="text-xl font-bold mb-4">
-          Bienvenido User {<UserCard user={user} />}
-        </h2>
+    <section className="flex flex-col container mx-auto">
+      <UserCard user={user} />
+      <section id="reports" className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Reports ListType="BASIC" />
+        <OcupationChart />
       </section>
     </section>
   );
