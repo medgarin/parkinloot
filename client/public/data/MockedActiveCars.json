@@ -1,15 +1,6 @@
 {
   "data": [
     {
-      "id": 1,
-      "type": "Carro",
-      "registration": "ABC-1234",
-      "total": 100,
-      "startDateTime": "2023-10-01T10:00:00Z",
-      "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "INACTIVE"
-    },
-    {
       "id": 2,
       "type": "Carro",
       "registration": "DEF-5678",
@@ -17,15 +8,6 @@
       "startDateTime": "2023-10-01T10:00:00Z",
       "endDateTime": "2023-10-01T12:00:00Z",
       "status": "ACTIVE"
-    },
-    {
-      "id": 3,
-      "type": "Carro",
-      "registration": "GHI-9012",
-      "total": 300,
-      "startDateTime": "2023-10-01T10:00:00Z",
-      "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "INACTIVE"
     },
     {
       "id": 4,
@@ -46,24 +28,6 @@
       "status": "ACTIVE"
     },
     {
-      "id": 6,
-      "type": "Carro",
-      "registration": "PQR-1234",
-      "total": 600,
-      "startDateTime": "2023-10-01T10:00:00Z",
-      "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "INACTIVE"
-    },
-    {
-      "id": 7,
-      "type": "Carro",
-      "registration": "STU-5678",
-      "total": 700,
-      "startDateTime": "2023-10-01T10:00:00Z",
-      "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "INACTIVE"
-    },
-    {
       "id": 8,
       "type": "Carro",
       "registration": "VWX-9012",
@@ -71,15 +35,6 @@
       "startDateTime": "2023-10-01T10:00:00Z",
       "endDateTime": "2023-10-01T12:00:00Z",
       "status": "ACTIVE"
-    },
-    {
-      "id": 9,
-      "type": "Carro",
-      "registration": "YZA-3456",
-      "total": 900,
-      "startDateTime": "2023-10-01T10:00:00Z",
-      "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "INACTIVE"
     },
     {
       "id": 10,
@@ -98,15 +53,6 @@
       "startDateTime": "2023-10-01T10:00:00Z",
       "endDateTime": "2023-10-01T12:00:00Z",
       "status": "ACTIVE"
-    },
-    {
-      "id": 12,
-      "type": "Carro",
-      "registration": "HIJ-5678",
-      "total": 1200,
-      "startDateTime": "2023-10-01T10:00:00Z",
-      "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "INACTIVE"
     }
   ]
 }

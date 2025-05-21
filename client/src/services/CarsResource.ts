@@ -4,4 +4,11 @@ export const CarsResource = {
     const { data } = await response.json();
     return data;
   },
+  getActiveCars: async () => {
+    const response = await fetch(
+      "http://localhost:5173/data/MockedActiveCars.json"
+    );
+    const { data } = await response.json();
+    return data;
+  },
 };
