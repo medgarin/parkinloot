@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { useCarsActive } from "../../hooks/useCarsActive";
 import type { Car } from "../../types/Cars";
 import type { ListType } from "../../types/Reports";
 import { ListItemBasic } from "./ListItemBasic";
@@ -17,13 +15,10 @@ export const List = ({ list, ListType }: ListProps) => {
 
   const [searchParams, setSearchparams] = useSearchParams();
 
-  const { getGetActiveCars, cars } = useCarsActive();
-
-  useEffect(() => {
-    getGetActiveCars().catch(null);
-  }, [getGetActiveCars]);
-
-  const ListCars = searchParams.get("filter") === "ACTIVE" ? cars : list;
+  const ListCars =
+    searchParams.get("filter") === "ACTIVE"
+      ? list.filter((car) => car.status === "ACTIVE")
+      : list;
 
   return (
     <div className="rounded-lg border border-gray-200 shadow-md m-5 p-2 h-min w-3xl bg-white">
@@ -42,11 +37,9 @@ export const List = ({ list, ListType }: ListProps) => {
               Tiempo Estacionado{" "}
               <MdFilterList
                 onClick={() => {
-                  if (searchParams.get("filter") === "ACTIVE") {
-                    setSearchparams({});
-                  } else {
-                    setSearchparams({ filter: "ACTIVE" });
-                  }
+                  searchParams.get("filter") === "ACTIVE"
+                    ? setSearchparams({})
+                    : setSearchparams({ filter: "ACTIVE" });
                 }}
               />
             </th>
