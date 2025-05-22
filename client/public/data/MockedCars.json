@@ -25,7 +25,7 @@
       "total": 300,
       "startDateTime": "2023-10-01T10:00:00Z",
       "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "ACTIVE"
+      "status": "INACTIVE"
     },
     {
       "id": 4,
@@ -52,7 +52,7 @@
       "total": 600,
       "startDateTime": "2023-10-01T10:00:00Z",
       "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "ACTIVE"
+      "status": "INACTIVE"
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "total": 700,
       "startDateTime": "2023-10-01T10:00:00Z",
       "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "ACTIVE"
+      "status": "INACTIVE"
     },
     {
       "id": 8,
@@ -79,7 +79,7 @@
       "total": 900,
       "startDateTime": "2023-10-01T10:00:00Z",
       "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "ACTIVE"
+      "status": "INACTIVE"
     },
     {
       "id": 10,
@@ -106,7 +106,7 @@
       "total": 1200,
       "startDateTime": "2023-10-01T10:00:00Z",
       "endDateTime": "2023-10-01T12:00:00Z",
-      "status": "ACTIVE"
+      "status": "INACTIVE"
     }
   ]
 }

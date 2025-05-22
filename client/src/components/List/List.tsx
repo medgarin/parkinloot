@@ -2,6 +2,8 @@ import type { Car } from "../../types/Cars";
 import type { ListType } from "../../types/Reports";
 import { ListItemBasic } from "./ListItemBasic";
 import { ListItemDetail } from "./ListItemDetail";
+import { MdFilterList } from "react-icons/md";
+import { useSearchParams } from "react-router";
 
 export interface ListProps {
   list: Car[];
@@ -10,6 +12,13 @@ export interface ListProps {
 
 export const List = ({ list, ListType }: ListProps) => {
   const isDetail = ListType === "DETAIL";
+
+  const [searchParams, setSearchparams] = useSearchParams();
+
+  const ListCars =
+    searchParams.get("filter") === "ACTIVE"
+      ? list.filter((car) => car.status === "ACTIVE")
+      : list;
 
   return (
     <div className="rounded-lg border border-gray-200 shadow-md m-5 p-2 h-min bg-white">
@@ -24,15 +33,24 @@ export const List = ({ list, ListType }: ListProps) => {
                 <th className="px-6 py-4">Fecha de Salida</th>
               </>
             )}
-            <th className="px-6 py-4">Tiempo Estacionado</th>
+            <th className="flex items-center gap-1.5 px-6 py-4">
+              Tiempo Estacionado{" "}
+              <MdFilterList
+                onClick={() => {
+                  searchParams.get("filter") === "ACTIVE"
+                    ? setSearchparams({})
+                    : setSearchparams({ filter: "ACTIVE" });
+                }}
+              />
+            </th>
             <th className="px-6 py-4">Cantidad a Pagar</th>
             <th className="px-6 py-4">Acción</th>
           </tr>
         </thead>
         <tbody>
           {isDetail
-            ? list.map((car, i) => <ListItemDetail key={i} car={car} />)
-            : list.map((car, i) => <ListItemBasic key={i} car={car} />)}
+            ? ListCars.map((car, i) => <ListItemDetail key={i} car={car} />)
+            : ListCars.map((car, i) => <ListItemBasic key={i} car={car} />)}
         </tbody>
       </table>
     </div>
