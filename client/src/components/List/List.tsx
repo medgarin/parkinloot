@@ -21,7 +21,7 @@ export const List = ({ list, ListType }: ListProps) => {
       : list;
 
   return (
-    <div className="rounded-lg border border-gray-200 shadow-md m-5 p-2 h-min bg-white">
+    <div className="rounded-lg border border-gray-200 shadow-md m-5 p-2 h-min bg-white overflow-x-auto">
       <table className="table-auto w-full text-black bg-white text-sm text-left">
         <thead className="bg-gray-50">
           <tr className="text-gray-900 font-medium">
